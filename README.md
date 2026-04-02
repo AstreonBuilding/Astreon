@@ -1,492 +1,462 @@
-# picoLLM Inference Engine
+<p align="center">
+  <img width="400" height="400" alt="astreon_logo" src="https://github.com/AstreonBuilding/astreon-analytics/blob/main/astreon-removebg-preview.png" />
+</p>
 
-[![GitHub release](https://img.shields.io/github/release/Picovoice/picollm.svg)](https://github.com/Picovoice/picollm/releases)
-[![GitHub](https://img.shields.io/github/license/Picovoice/picollm)](https://github.com/Picovoice/picollm/)
+<h1 align="center">Astreon Analytics</h1>
 
-[![Maven Central](https://img.shields.io/maven-central/v/ai.picovoice/picollm-android?label=maven-central%20%5Bandroid%5D)](https://repo1.maven.org/maven2/ai/picovoice/picollm-android/)
-[![npm](https://img.shields.io/npm/v/@picovoice/picollm-web?label=npm%20%5Bweb%5D)](https://www.npmjs.com/package/@picovoice/picollm-web)<!-- markdown-link-check-disable-line -->
-[![CocoaPods](https://img.shields.io/cocoapods/v/picoLLM-iOS)](https://cocoapods.org/pods/picoLLM-iOS)<!-- markdown-link-check-disable-line -->
-[![PyPI](https://img.shields.io/pypi/v/picollm)](https://pypi.org/project/picollm/)
-[![Nuget](https://img.shields.io/nuget/v/picollm)](https://www.nuget.org/packages/PicoLLM/)
+<div align="center">
+  <p><strong>Astreon is an on-chain analytics platform that unifies markets, structure, and risk into a single system for informed analysis and decision-making></p>
+  <p>Token intelligence • Wallet profiling • Protocol flows • Agents • API • Credit-based usage</p>
+</div>
 
-Made in Vancouver, Canada by [Picovoice](https://picovoice.ai)
+---
 
-[![Twitter URL](https://img.shields.io/twitter/url?label=%40AiPicovoice&style=social&url=https%3A%2F%2Ftwitter.com%2FAiPicovoice)](https://twitter.com/AiPicovoice)<!-- markdown-link-check-disable-line -->
-[![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCAdi9sTCXLosG1XeqDwLx7w?label=YouTube&style=social)](https://www.youtube.com/channel/UCAdi9sTCXLosG1XeqDwLx7w)
+### 🚀 Quick Links
 
-picoLLM Inference Engine is a highly accurate and cross-platform SDK optimized for running compressed large language
-models. picoLLM Inference Engine is:
+[![Web App](https://img.shields.io/badge/Web%20App-Open-3b82f6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://your-app-link)
+[![Docs](https://img.shields.io/badge/Docs-Read-8b5cf6?style=for-the-badge&logo=readthedocs&logoColor=white)](https://your-docs-link)
+[![API](https://img.shields.io/badge/API-Access-10b981?style=for-the-badge&logo=api&logoColor=white)](https://api.astreon.xyz)
+[![X.com](https://img.shields.io/badge/X.com-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/your_account)
+[![Telegram](https://img.shields.io/badge/Telegram-Join-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/your_channel)
 
-- Accurate; picoLLM Compression improves GPTQ by [significant margins](https://picovoice.ai/blog/picollm-towards-optimal-llm-quantization/)
-- Private; LLM inference runs 100% locally.
-- Cross-Platform
-    - Linux (x86_64), macOS (arm64, x86_64), and Windows (x86_64, arm64)
-    - Raspberry Pi (5 and 4)
-    - Android and iOS
-    - Chrome, Safari, Edge, and Firefox
-- Runs on CPU and GPU
-- Free for open-weight models
+---
 
-## Table of Contents
+## Overview
 
-- [picoLLM](#picollm-inference-engine)
-    - [Table of Contents](#table-of-contents)
-    - [Showcases](#showcases)
-      - [Raspberry Pi](#raspberry-pi)
-      - [Android](#android)
-      - [iOS](#ios)
-      - [Cross-Browser Local LLM](#cross-browser-local-llm)
-      - [Llama-3-70B-Instruct on GeForce RTX 4090](#llama-3-70b-instruct-on-geforce-rtx-4090)
-      - [Local LLM-Powered Voice Assistant on Raspberry Pi](#local-llm-powered-voice-assistant-on-raspberry-pi)
-      - [Local Llama-3-8B-Instruct Voice Assistant on CPU](#local-llama-3-8b-instruct-voice-assistant-on-cpu)
-    - [Accuracy](#accuracy)
-    - [Models](#models)
-    - [AccessKey](#accesskey)
-    - [Demos](#demos)
-        - [Python](#python-demos)
-        - [.NET](#net-demos)
-        - [Node.js](#nodejs-demos)
-        - [Android](#android-demos)
-        - [iOS](#ios-demos)
-        - [Web](#web-demos)
-        - [C](#c-demos)
-    - [SDKs](#sdks)
-        - [Python](#python-sdk)
-        - [.NET](#net-sdk)
-        - [Node.js](#nodejs-sdk)
-        - [Android](#android-sdk)
-        - [iOS](#ios-sdk)
-        - [Web](#web-sdk)
-        - [C](#c-sdk)
-    - [Releases](#releases)
+Astreon Analytics is a multi-chain on-chain analytics and research platform designed for traders, research teams, protocol operators, and builders who need more than scattered tabs and disconnected dashboards
 
-## Showcases
+Instead of splitting your workflow between charts, explorers, screenshots, notes, and spreadsheets, Astreon gives you one environment where market context, structural analytics, and repeatable research can live together
 
-### Raspberry Pi
+> [!IMPORTANT]
+> Astreon is not a signal service and does not provide guaranteed outcomes or buy/sell calls  
+> It is built to help users understand what they are looking at before they act
 
-[![Local LLM on Raspberry Pi](https://img.youtube.com/vi/CeKPXZ_8hkI/0.jpg)](https://www.youtube.com/watch?v=CeKPXZ_8hkI)
+The platform is designed around a simple idea: if your market view, risk view, and research layer are disconnected, your decisions become slower, noisier, and easier to distort
 
-### Android
+That is the gap Astreon is built to close
 
-[![How to Run a Local LLM on Android](https://img.youtube.com/vi/XeUMkue-5lI/0.jpg)](https://www.youtube.com/watch?v=XeUMkue-5lI)
+---
 
-### iOS
+## How It Works
 
-[![How to Run a Local LLM on iOS](https://img.youtube.com/vi/dNK5esdkI0Y/0.jpg)](https://www.youtube.com/watch?v=dNK5esdkI0Y)
-
-### Cross-Browser Local LLM
-
-[Live Demo — Works offline!](https://picovoice.ai/picollm/)
-
-### Llama-3-70B-Instruct on GeForce RTX 4090
-
-[![Llama-3-70B-Instruct on GeForce RTX 4090](https://img.youtube.com/vi/4mcVwbOOIqk/0.jpg)](https://www.youtube.com/watch?v=4mcVwbOOIqk)
-
-### Local LLM-Powered Voice Assistant on Raspberry Pi
-
-[![Local LLM-Powered Voice Assistant on Raspberry Pi](https://img.youtube.com/vi/GEndT3RGRvw/0.jpg)](https://www.youtube.com/watch?v=GEndT3RGRvw)
-
-### Local Llama-3-8B-Instruct Voice Assistant on CPU
-
-[![Local Llama-3-8B-Instruct Voice Assistant on CPU](https://img.youtube.com/vi/uV0GlXDFSPw/0.jpg)](https://www.youtube.com/watch?v=uV0GlXDFSPw)
-
-## Accuracy
-
-picoLLM Compression is a novel large language model (LLM) quantization algorithm developed within Picovoice. Given a task-specific cost function, picoLLM Compression automatically learns the optimal bit allocation strategy across and within LLM's weights. Existing techniques require a fixed bit allocation scheme, which is subpar.
-
-For example, picoLLM Compression recovers MMLU score degradation of widely adopted GPTQ by 91%, 99%, and 100% at 2, 3,
-and 4-bit settings. The figure below depicts the MMLU comparison between picoLLM and GPTQ for Llama-3-8b [[1]](https://picovoice.ai/blog/picollm-towards-optimal-llm-quantization/).
-
-![picoLLM Compression vs GPTQ MMLU scores when applied to Llama-3-8B](./resources/mmlu-llama-3-8b.svg)
-
-## Models
-
-picoLLM Inference Engine supports the following open-weight models. The models are on
-[Picovoice Console](https://console.picovoice.ai/).
-
-- Gemma
-    - `gemma-2b`
-    - `gemma-2b-it`
-    - `gemma-7b`
-    - `gemma-7b-it`
-- Llama-2
-    - `llama-2-7b`
-    - `llama-2-7b-chat`
-    - `llama-2-13b`
-    - `llama-2-13b-chat`
-    - `llama-2-70b`
-    - `llama-2-70b-chat`
-- Llama-3
-    - `llama-3-8b`
-    - `llama-3-8b-instruct`
-    - `llama-3-70b`
-    - `llama-3-70b-instruct`
-- Llama-3.2
-    - `llama3.2-1b-instruct`
-    - `llama3.2-3b-instruct`
-- Mistral
-    - `mistral-7b-v0.1`
-    - `mistral-7b-instruct-v0.1`
-    - `mistral-7b-instruct-v0.2`
-- Mixtral
-    - `mixtral-8x7b-v0.1`
-    - `mixtral-8x7b-instruct-v0.1`
-- Phi-2
-    - `phi2`
-- Phi-3
-    - `phi3`
-- Phi-3.5
-  - `phi3.5`
-
-## AccessKey
-
-AccessKey is your authentication and authorization token for deploying Picovoice SDKs, including picoLLM. Anyone who is using Picovoice needs to have a valid AccessKey. You must keep your AccessKey secret. You would need internet connectivity to validate your AccessKey with Picovoice license servers, even though the LLM inference is running 100% offline.
-
-AccessKey also verifies that your usage is within the limits of your account. You can see your usage limits and real-time usage on your [Picovoice Console](https://console.picovoice.ai/signup) Profile. To continue using Picovoice after your trial or renew and adjust your usage limits, please reach out to our [Enterprise Sales Team](https://picovoice.ai/contact/) or your existing Picovoice contact.
-
-## Demos
-
-### Python Demos
-
-Install the demo package:
-
-```console
-pip3 install picollmdemo
+```mermaid
+flowchart LR
+    A[Connect wallet] --> B[Get credits]
+    B --> C[Run analysis]
+    C --> D[AI processes data]
+    D --> E[Structured output]
+    E --> F[Trade or continue research]
 ```
 
-Run the following in the terminal:
+Astreon follows a practical research loop that takes the user from discovery to structured action without forcing them into five separate tools
 
-```console
-picollm_demo_completion --access_key ${ACCESS_KEY} --model_path ${MODEL_PATH} --prompt ${PROMPT}
+| Step | What happens | Result |
+|------|--------------|--------|
+| 1 | Connect wallet or create account | Product context is created |
+| 2 | Receive free tier access or add credits | Usage capacity is unlocked |
+| 3 | Scan markets and open analytics | Relevant targets are identified |
+| 4 | AI and analytics layers process data | Structure, risk, and context become visible |
+| 5 | Output is saved into lists or workflows | Research becomes reusable |
+| 6 | User continues manually or extends with agents/API | Workflow scales over time |
+
+> [!TIP]
+> The best way to use Astreon is not to run heavy analytics on everything  
+> Start with market scanning, shortlist only what matters, then go deeper with Insights
+
+---
+
+## User Flow
+
+### 1 → Discover
+
+The user starts in **Markets & Terminal**
+
+This is the live market surface where they scan activity across supported chains, review trend lists, compare liquidity and volume, and identify which assets or protocols are worth a deeper look
+
+### 2 → Validate
+
+Once something stands out, the user opens the relevant analytics module
+
+That may be:
+
+- **Token Insights**
+- **Wallet Insights**
+- **Protocol Insights**
+
+Each report follows a consistent structure so the user sees the same logic every time instead of learning a new interface for each object
+
+### 3 → Organize
+
+Important assets, wallets, and protocols can be added into named lists, portfolios, dashboards, or recurring research flows
+
+This turns one-off checks into persistent research objects that can be reopened and extended
+
+### 4 → Scale
+
+When the workflow becomes regular, the user can layer on:
+
+- agents
+- alerts
+- API access
+- webhooks
+- scheduled analytics
+
+> [!NOTE]
+> Astreon is designed to work for both light manual exploration and heavier infrastructure-style workflows  
+> Users can stay simple or gradually move into automation without changing tools
+
+---
+
+## Core Features
+
+### Markets & Terminal
+
+The main market surface of Astreon is built for discovery and shortlisting
+
+It gives users:
+
+- multi-chain market scanning
+- trend and volume views
+- chart access
+- quick context panels
+- fast routes into deeper analytics
+
+| Capability | Why it matters |
+|-----------|----------------|
+| Market lists | Quickly spot movement without browsing dozens of sources |
+| Filters and sorting | Reduce noise and focus on relevant assets |
+| Quick analytics entry | Jump from market scan into structured research |
+| Unified context panel | Keep the asset, chain, and next action visible |
+
+> [!WARNING]
+> Market activity alone can be misleading  
+> Astreon treats price movement as an entry point into analysis, not a conclusion
+
+### Token Insights
+
+Token Insights answers the question: **what is this asset structurally**
+
+A typical report includes:
+
+- risk score
+- liquidity profile
+- holder concentration
+- supply context
+- security or contract-level notes
+- optional flow signals
+- short interpretation
+
+| Section | Focus |
+|--------|-------|
+| Risk | Relative risk across tracked assets |
+| Liquidity | Depth, venue distribution, and tradeability |
+| Holders | Concentration, clusters, and structural pressure |
+| Supply | Distribution and token structure context |
+| Notes | Concise interpretation for decision support |
+
+### Wallet Insights
+
+Wallet Insights focuses on how a wallet behaves, allocates capital, and carries risk
+
+It helps the user understand:
+
+- what type of participant this wallet is
+- how concentrated or diversified it is
+- how aggressive its sizing tends to be
+- which themes dominate the allocation
+- whether the structure aligns with the user's own goals
+
+| View | Description |
+|------|-------------|
+| Allocation | How capital is split across assets and categories |
+| Concentration | How much sits in top positions |
+| Behaviour | Signs of rotation, holding style, and reaction patterns |
+| Structural risk | Overexposure, illiquidity, lack of hedge, or one-sided themes |
+
+### Protocol Insights
+
+Protocol Insights gives a protocol-level research layer that helps users understand where liquidity comes from, where it exits, and how capital behaves inside the ecosystem
+
+This is especially useful for teams, ecosystem operators, and researchers trying to map real usage rather than surface-level sentiment
+
+### Portfolio & Lists
+
+Portfolio & Lists is the personal working layer of Astreon
+
+It combines connected wallet exposure with saved objects and lets users build their own market universe instead of always returning to the full market firehose
+
+| Object type | What you can do |
+|------------|-----------------|
+| Tokens | Track, revisit, relaunch analytics |
+| Wallets | Save counterparties, whales, or internal addresses |
+| Protocols | Organize ecosystems and recurring research targets |
+| Lists | Build strategy sets, narratives, or watch universes |
+
+> [!IMPORTANT]
+> Lists in Astreon are not just labels  
+> They are designed to become living research containers linked to analytics history, alerts, and follow-up actions
+
+### Screeners & Filters
+
+Screeners let users define repeatable logic for discovering assets, wallets, or protocols that match specific structural conditions
+
+Examples include:
+
+- liquidity thresholds
+- age filters
+- volume filters
+- top-holder concentration
+- wallet labels
+- protocol categories
+- TVL and TVL change
+
+This turns recurring questions into saved logic instead of repeated manual searching
+
+### Agents
+
+Agents are configurable assistants that sit on top of the same analytics surfaces used elsewhere in the product
+
+They can:
+
+- monitor tokens, wallets, and protocols
+- rerun analytics on schedules or triggers
+- generate summaries
+- send alerts
+- help formalize recurring research logic
+
+| Agent type | Role |
+|-----------|------|
+| Monitoring agent | Watches targets and conditions |
+| Analytics agent | Reruns reports when triggers fire |
+| Summary agent | Delivers periodic digests and updates |
+
+> [!CAUTION]
+> Agents are not black-box trading bots  
+> They extend research and monitoring workflows, but responsibility for decisions remains with the user
+
+### API & Integrations
+
+Astreon can also be used as infrastructure through:
+
+- Analytics API
+- Agents API
+- webhook subscriptions
+- custom external integrations
+
+This allows internal tools, bots, dashboards, and research pipelines to plug directly into Astreon rather than rebuilding the same logic elsewhere
+
+---
+
+## Interface Preview
+
+The interface is organized around a few main surfaces that map to the user journey
+
+| Surface | Purpose | Best use case |
+|--------|---------|---------------|
+| Markets & Terminal | Live discovery layer | Scanning what is moving right now |
+| Insights modules | Structured analysis layer | Understanding risk, structure, and context |
+| Portfolio & Lists | Personal research layer | Tracking what already matters to you |
+| Agents section | Monitoring and automation | Scaling repeatable workflows |
+| Usage & Burn dashboard | Economic transparency | Tracking credits, spend, burn, and limits |
+
+```text
+Suggested screenshots for this section:
+
+1. Markets & Terminal
+2. Token Insights report
+3. Wallet Insights report
+4. Portfolio & Lists
+5. Agents dashboard
+6. Credits / Burn dashboard
 ```
 
-Replace `${ACCESS_KEY}` with yours obtained from Picovoice Console, `${MODEL_PATH}` with the path to a model file
-downloaded from Picovoice Console, and `${PROMPT}` with a prompt string.
+> [!NOTE]
+> Once real product visuals are ready, replace this block with screenshots, GIFs, or framed UI previews  
+> This section should visually confirm the journey described above
 
-For more information about Python demos go to [demo/python](demo/python/README.md).
+---
 
-### .NET Demos
+## Getting Started
 
-From [demo/dotnet/PicoLLMDemo](demo/dotnet/PicoLLMDemo) build and run the demo:
+### 1. Create your context
 
-```console
-dotnet build -c CompletionDemo.Release
-dotnet run -c CompletionDemo.Release -- --access_key ${ACCESS_KEY} --model_path ${MODEL_PATH} --prompt ${PROMPT}
+Create an account or connect a wallet to establish your product environment, preferences, and basic identity
+
+### 2. Enter the market layer
+
+Open **Markets & Terminal** and use trend lists, filters, and charts to identify assets or protocols that deserve deeper attention
+
+### 3. Launch analytics
+
+Run **Token Insights**, **Wallet Insights**, or **Protocol Insights** from the terminal or by pasting a direct target
+
+### 4. Save what matters
+
+Add important objects to lists, portfolio views, or research sets so the work remains accessible
+
+### 5. Expand usage
+
+When the workflow becomes regular, add:
+
+- credits
+- plans
+- agents
+- API keys
+- webhooks
+
+| Starting point | Next logical step |
+|---------------|-------------------|
+| Manual market scanning | Token or wallet analysis |
+| One-off analysis | Saved list or dashboard |
+| Repeated checks | Agent or screener |
+| Team or system usage | API and integrations |
+
+> [!TIP]
+> A strong Astreon workflow usually starts simple  
+> Scan, validate, save, then automate only the parts you genuinely repeat
+
+---
+
+## Stack
+
+Astreon combines product surfaces, analytics infrastructure, and a token-powered usage model into one system
+
+| Layer | Includes |
+|------|----------|
+| Product layer | Web app, terminal, lists, dashboards, identity, billing |
+| Analytics layer | Token, wallet, and protocol reports plus screeners |
+| Automation layer | Agents, scheduled checks, alerts, webhooks |
+| Developer layer | REST API, analytics endpoints, agent endpoints, integrations |
+| Utility layer | Credits, plans, $ASTR payments, burn and treasury logic |
+
+This structure allows Astreon to work both as a user-facing product and as a backend analytics layer for custom internal systems
+
+---
+
+## API Preview
+
+The API gives developers direct access to projects, analytics, agents, and integrations
+
+### Base URL
+
+```bash
+https://api.astreon.xyz
 ```
 
-Replace `${ACCESS_KEY}` with yours obtained from Picovoice Console, `${MODEL_PATH}` with the path to a model file
-downloaded from Picovoice Console, and `${PROMPT}` with a prompt string.
+### Authentication
 
-For more information about .NET demos go to [demo/dotnet](demo/dotnet).
-
-### Node.js Demos
-
-Install the demo package:
-
-```console
-yarn global add @picovoice/picollm-node-demo
+```bash
+Authorization: Bearer <API_KEY>
+Content-Type: application/json
 ```
 
-Run the following in the terminal:
+### Example request
 
-```console
-picollm-completion-demo --access_key ${ACCESS_KEY} --model_path ${MODEL_PATH} --prompt ${PROMPT}
+```bash
+curl "https://api.astreon.xyz/v1/projects?limit=20" \
+  -H "Authorization: Bearer $ASTREON_API_KEY"
 ```
 
-Replace `${ACCESS_KEY}` with yours obtained from Picovoice Console, `${MODEL_PATH}` with the path to a model file
-downloaded from Picovoice Console, and `${PROMPT}` with a prompt string.
+### Example response
 
-For more information about Node.js demos go to [Node.js demo](./demo/nodejs).
-
-### Android Demos
-
-Using Android Studio, open the [Completion demo](demo/android/Completion) as an Android project, copy your AccessKey into MainActivity.java, and run the application.
-
-To learn about how to use picoLLM in a chat application, try out the [Chat demo](demo/android/Chat).
-
-For more information about Android demos go to [demo/android](demo/android/README.md).
-
-### iOS Demos
-
-To run the completion demo, go to [demo/ios/Completion](demo/ios/Completion) and run:
-
-```console
-pod install
-```
-
-Replace `let ACCESS_KEY = "${YOUR_ACCESS_KEY_HERE}"` in the file [VieModel.swift](demo/ios/Completion/PicoLLMCompletionDemo/ViewModel.swift) with your AccessKey obtained from [Picovoice Console](https://console.picovoice.ai/).
-
-Then, using [Xcode](https://developer.apple.com/xcode/), open the generated `PicoLLMCompletionDemo.xcworkspace` and run the application.
-
-To learn about how to use picoLLM in a chat application, try out the [Chat demo](demo/ios/Chat).
-
-For more information about iOS demos go to [demo/ios](demo/ios/README.md).
-
-### Web Demos
-
-From [demo/web](demo/web) run the following in the terminal:
-
-```console
-yarn
-yarn start
-```
-
-(or)
-
-```console
-npm install
-npm run start
-```
-
-Open `http://localhost:5000` in your browser to try the demo.
-
-### C Demos
-
-Build the demo:
-
-```console
-cmake -S demo/c/ -B demo/c/build && cmake --build demo/c/build
-```
-
-Run the demo:
-
-```console
-./demo/c/build/picollm_demo_completion -a ${ACCESS_KEY} -l ${LIBRARY_PATH} -m ${MODEL_FILE_PATH} -p ${PROMPT}
-```
-
-Replace `${ACCESS_KEY}` with yours obtained from Picovoice Console, `${LIBRARY_PATH}` with the path to the shared
-library file located in the [lib](lib) directory, `${MODEL_FILE_PATH}` with the path to a model file downloaded from
-Picovoice Console, and `${PROMPT}` with a prompt string.
-
-For more information about C demos go to [demo/c](demo/c/README.md).
-
-## SDKs
-
-### Python SDK
-
-Install the Python SDK:
-
-```console
-pip3 install picollm
-```
-
-Create an instance of the engine and generate a prompt completion:
-
-```python
-import picollm
-
-pllm = picollm.create(
-    access_key='${ACCESS_KEY}',
-    model_path='${MODEL_PATH}')
-
-res = pllm.generate('${PROMPT}')
-print(res.completion)
-```
-
-Replace `${ACCESS_KEY}` with yours obtained from Picovoice Console, `${MODEL_PATH}` to the path to a model file
-downloaded from Picovoice Console, and `${PROMPT}` to a prompt string. Finally, when done be sure to explicitly release
-the resources using `pllm.release()`.
-
-### .NET SDK
-
-Install the .NET SDK using NuGet or the dotnet CLI:
-
-```console
-dotnet add package PicoLLM
-```
-
-Create an instance of the engine and generate a prompt completion:
-
-```csharp
-using Pv;
-
-PicoLLM pllm = PicoLLM.Create("${ACCESS_KEY}", "${MODEL_PATH}");
-
-PicoLLMCompletion res = pllm.Generate('${PROMPT}');
-Console.WriteLine(res.Completion);
-```
-
-Replace `${ACCESS_KEY}` with yours obtained from Picovoice Console, `${MODEL_PATH}` to the path to a model file
-downloaded from Picovoice Console, and `${PROMPT}` to a prompt string.
-
-`PicoLLM` will have its resources freed by the garbage collector, but to have resources freed immediately after use,
-wrap it in a using statement or call `.Dispose()` directly:
-
-```csharp
-using(PicoLLM pllm = PicoLLM.Create(accessKey, modelPath))
+```json
 {
-    // .. picoLLM usage here
+  "items": [
+    {
+      "id": "prj_123",
+      "name": "My first project"
+    }
+  ],
+  "total": 1
 }
 ```
 
-### Node.js SDK
+> [!WARNING]
+> Never expose API keys in public repositories or client-side code  
+> Store them in environment variables or a secret manager
 
-Install the Node.js SDK:
+---
 
-```console
-yarn add @picovoice/picollm-node
-```
+## Credits and $ASTR
 
-Create instances of the picoLLM class:
+Astreon uses a transparent internal metering model for paid actions
 
-```javascript
-const { PicoLLM } = require("@picovoice/picollm-node");
-const pllm = new PicoLLM('${ACCESS_KEY}', '${MODEL_PATH}');
+| Element | Function |
+|--------|----------|
+| Credits | Measure paid usage across analytics, agents, and API calls |
+| Plans | Define included credits and usage limits |
+| $ASTR | Used for plans and credit top-ups |
+| Burn | Fixed share of payments removed from circulation |
+| Treasury | Remaining share allocated to development and ecosystem growth |
 
-const res = await pllm.generate('${PROMPT}');
-console.log(res.completion);
-```
+This creates a direct relationship between platform usage and token mechanics without turning the product into a pure token wrapper
 
-Replace `${ACCESS_KEY}` with yours obtained from Picovoice Console, `${MODEL_PATH}` to the path to a model file
-downloaded from Picovoice Console, and `${PROMPT}` to a prompt string. Finally, when done be sure to explicitly release
-the resources using `pllm.release()`.
+> [!IMPORTANT]
+> $ASTR is a utility token inside the product economy  
+> It is not positioned as equity or a claim on revenue
 
-### Android SDK
+---
 
-Create an instance of the inference engine and generate a prompt completion:
+## Security and Data Handling
 
-```java
-import ai.picovoice.picollm.*;
+Astreon is designed so the user keeps custody and control over wallet-level authority
 
-try {
-    PicoLLM picollm = new PicoLLM.Builder()
-        .setAccessKey("${ACCESS_KEY}")
-        .setModelPath("${MODEL_PATH}")
-        .build();
-    PicoLLMCompletion res = picollm.generate(
-        "${PROMPT}",
-        new PicoLLMGenerateParams.Builder().build());
-} catch (PicoLLMException e) { }
-```
+It does **not** store:
 
-Replace `${ACCESS_KEY}` with your `AccessKey` from Picovoice Console, `${MODEL_PATH}` to the path to a model file
-downloaded from Picovoice Console, and `${PROMPT}` to a prompt string. Finally, when done be sure to explicitly release
-the resources using `picollm.delete()`.
+- private keys
+- seed phrases
+- wallet secrets
 
-### iOS SDK
+It may store:
 
-Create an instance of the engine and generate a prompt completion:
+- public wallet addresses
+- account links
+- billing data
+- usage metadata
+- analytics history
 
-```swift
-import PicoLLM
+| Area | Approach |
+|------|----------|
+| Wallet custody | Always user-controlled |
+| Signing | Explicit confirmation required |
+| API access | Bearer token authentication |
+| Webhooks | Signature verification supported |
+| Data transport | HTTPS only |
+| Sensitive storage | Encrypted at rest via provider-managed infrastructure |
 
-let pllm = try PicoLLM(
-    accessKey: "${ACCESS_KEY}",
-    modelPath: "${MODEL_PATH}")
+> [!CAUTION]
+> The platform can help structure decision-making, but operational safety still depends on the user  
+> Wallet hygiene, key handling, and access review remain essential
 
-let res = pllm.generate(prompt: "${PROMPT}")
-print(res.completion)
-```
+---
 
-Replace `${ACCESS_KEY}` with yours obtained from Picovoice Console, `${MODEL_PATH}` to the path to a model file
-downloaded from Picovoice Console, and `${PROMPT}` to a prompt string.
+## Who It Is For
 
-### Web SDK
+Astreon is built for users who work directly with on-chain data and need decisions to be based on structure rather than scattered impressions
 
-Install the web SDK using yarn:
+| User type | Why Astreon fits |
+|----------|------------------|
+| Traders | Need context behind movement, not just price action |
+| Research desks | Repeat the same analysis across many names |
+| Protocol teams | Need visibility into capital movement and structure |
+| Builders and quants | Prefer APIs, schemas, and reusable systems |
 
-```console
-yarn add @picovoice/picollm-web
-```
+If the current workflow is "check social feed, open chart, maybe inspect a block explorer, then lose the notes later", Astreon is the cleaner upgrade path
 
-or using npm:
+---
 
-```console
-npm install --save @picovoice/picollm-web
-```
+## Notes
 
-Create an instance of the engine using `PicoLLMWorker` and transcribe an audio file:
+Astreon is an analytics and research system built to make on-chain workflows more consistent, interpretable, and reusable
 
-```typescript
-import { PicoLLMWorker } from "@picovoice/picollm-web";
+It is not:
 
-const picoLLMModel = {
-  modelFile: '${MODEL_FILE}'
-}
+- a guaranteed strategy engine
+- a copy-trading product
+- a promise of profitable outcomes
 
-const picoLLM = await PicoLLMWorker.create(
-  "${ACCESS_KEY}",
-  picoLLMModel
-);
+The goal is simple: help users see more clearly, organize what matters, and scale their process without scaling chaos
 
-const res = await picoLLM.generate(`${PROMPT}`);
-console.log(res.completion);
-```
+---
 
-Replace `${ACCESS_KEY}` with yours obtained from [Picovoice Console](https://console.picovoice.ai/), `${MODEL_FILE}` with the contents of the model file as `File`, `Blob` or `URL (path to model file)` format and `${PROMPT}` with a prompt string. Finally, when done release the resources using `picoLLM.release()`.
-
-### C SDK
-
-Create an instance of the engine and generate a prompt completion:
-
-```c
-pv_picollm_t *pllm = NULL;
-pv_picollm_init(
-    "${ACCESS_KEY}",
-    "${MODEL_PATH}",
-    "best",
-    &pllm);
-
-pv_picollm_usage_t usage;
-pv_picollm_endpoint_t endpoint;
-int32_t num_completion_tokens;
-pv_picollm_completion_token_t *completion_tokens;
-char *output;
-pv_picollm_generate(
-    pllm,
-    "${PROMPT}",
-    -1,    // completion_token_limit
-    NULL,  // stop_phrases
-    0,     // num_stop_phrases
-    -1,    // seed
-    0.f,   // presence_penalty
-    0.f,   // frequency_penalty
-    0.f,   // temperature
-    1.f,   // top_p
-    0,     // num_top_choices
-    NULL,  // stream_callback
-    NULL,  // stream_callback_context
-    &usage,
-    &endpoint,
-    &completion_tokens,
-    &num_completion_tokens,
-    &output);
-printf("%s\n", output);
-```
-
-Replace `${ACCESS_KEY}` with yours obtained from Picovoice Console, `${MODEL_PATH}` to the path to a model file
-downloaded from Picovoice Console, and `${PROMPT}` to a prompt string.
-
-Finally, when done, be sure to release the resources explicitly:
-
-```c
-pv_picollm_delete(pllm);
-```
-
-## Releases
-
-### v2.0.0 - December 18, 2025
-
-- Improved engine performance
-- Improved support for running on GPU or multiple CPU cores
-
-### v1.3.0 - March 14th, 2025
-
-- Performance improvements
-- Significant performance improvements for iOS and Web
-
-### v1.2.0 - November 26th, 2024
-
-- Performance improvements
-- Added support for phi3.5
-
-### v1.1.0 - October 1st, 2024
-
-- Added `interrupt()` function for halting completion generation early
-- Performance improvements
-- Added support for phi3
-- Bug fixes
-
-### v1.0.0 - May 28th, 2024
-
-- Initial release
+<p align="center"><strong>Built for structured thinking in chaotic markets</strong></p>
