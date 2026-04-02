@@ -1,0 +1,26 @@
+{
+  "projectName": "dataforge",
+  "environment": "development",
+
+  "logging": {
+    "level": "debug",
+    "destinations": ["console", "file"],
+    "filePath": "./logs/dataforge.log",
+    "rotation": {
+      "enabled": true,
+      "maxSizeMb": 50,
+      "maxFiles": 5
+    }
+  },
+
+  "features": {
+    "enableDiagnostics": true,
+    "enableRealTimeAlerts": false,
+    "enableApiMocking": false
+  },
+
+  "security": {
+    "sanitizeInput": true,
+    "rateLimitPerMinute": 100
+  }
+}

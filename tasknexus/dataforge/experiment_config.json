@@ -1,0 +1,13 @@
+{
+  "experimentId": "00000000-0000-0000-0000-000000000000",
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "description": "",
+  "parameters": {
+    "tokenSymbol": "",
+    "analysisWindowMinutes": 60,
+    "volatilityThreshold": 0
+  },
+  "status": "draft",
+  "results": null,
+  "notes": ""
+}
