@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="400" height="400" alt="astreon_logo" src="https://github.com/AstreonBuilding/astreon-analytics/blob/main/astreon-removebg-preview.png" />
+  <img width="400" height="400" alt="astreon_logo" src="https://github.com/AstreonBuilding/Astreon/blob/main/astreon-removebg-preview.png" />
 </p>
 
 <h1 align="center">Astreon Analytics</h1>
